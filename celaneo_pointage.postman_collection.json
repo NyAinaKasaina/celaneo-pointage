@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "9000e528-b71a-4e04-a5a6-274fdbee9e0f",
+		"name": "celaneo_pointage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6403738"
+	},
+	"item": [
+		{
+			"name": "get_all_employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}",
+					"host": [
+						"{{BASE_URI}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_employees_filtered_by_date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}?dateCreated=2022-07-06",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"query": [
+						{
+							"key": "dateCreated",
+							"value": "2022-07-06"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkin",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeId\" : \"E0001\",\r\n    \"comment\"    : \"Comments\"\r\n}"
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/checkin",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"checkin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkout",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeId\" : \"E0001\",\r\n    \"comment\"    : \"Comments\"\r\n}"
+				},
+				"url": {
+					"raw": "{{BASE_URI}}/checkout",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_registrations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}/registrations",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"registrations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_timesheets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URI}}/timesheets",
+					"host": [
+						"{{BASE_URI}}"
+					],
+					"path": [
+						"timesheets"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URI",
+			"value": "localhost:3000"
+		}
+	]
+}

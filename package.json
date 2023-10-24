@@ -1,0 +1,23 @@
+{
+  "name": "pointage",
+  "version": "1.0.0",
+  "description": "test celaneo pointage ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx jest",
+    "start": "nodemon server.js"
+  },
+  "author": "nyainakasaina",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "sequelize": "^6.33.0",
+    "sqlite3": "^5.1.6",
+    "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1"
+  }
+}
